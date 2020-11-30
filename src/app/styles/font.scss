@@ -1,0 +1,18 @@
+$font: (
+  xxsmall: 10px,
+  xsmall: 12px,
+  small: 14px,
+  base:  16px,
+  large: 18px,
+  xlarge: 22px,
+  xxlarge:28px
+);
+
+@function fonts($font-name) {
+  $font: map-get($font, $font-name);
+  @if $font {
+    @return $font;
+  } @else {
+    @warn "=> ERROR: COLOR NOT FOUND!";
+  }
+}

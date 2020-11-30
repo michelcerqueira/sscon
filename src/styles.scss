@@ -1,0 +1,26 @@
+@import "./app/styles/colors.scss";
+@import "./app/styles/spaces.scss";
+@import "./app/styles/reset.scss";
+@import "./app/styles/font.scss";
+
+$space-vertical: spaces(xsmall);
+$space-horizontal: spaces(small);
+
+body {
+  a {
+    cursor: pointer;
+    color: colors('secundary');
+    padding: calc(#{$space-vertical} + 1px) calc(#{$space-horizontal} + 2px);
+    opacity: 0.8;
+    font-size: fonts(large);
+
+    &:hover {
+      text-decoration: none;
+      opacity: 1;
+      color: colors('secundary');
+      filter:alpha(opacity=100);
+    }
+  }
+}
+
+body { margin: 0; }

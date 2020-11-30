@@ -1,0 +1,15 @@
+$palette: (
+  primary: #670000,
+  secundary: #D7DBDD,
+  lightest: #fff,
+  light: #eee
+);
+
+@function colors($color-name) {
+  $color: map-get($palette, $color-name);
+  @if $color {
+    @return $color;
+  } @else {
+    @warn "=> ERROR: COLOR NOT FOUND!";
+  }
+}

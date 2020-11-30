@@ -1,0 +1,34 @@
+@import '../../../../styles.scss';
+
+
+header {
+  background-color: colors(primary);
+  // padding: spaces(medium);
+
+  & div:first-child {
+    display: flex;
+    align-items: center;
+  }
+
+  figure {
+    img {
+      width: 50px;
+      background: colors(lightest);
+      height: 53px;
+    }
+
+    &.col-xs-12 {
+      img {
+        width: 46px;
+        height: 49px;
+      }
+    }
+  }
+  nav {
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

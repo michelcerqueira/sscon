@@ -1,0 +1,7 @@
+<form [formGroup]="buscaCepForm" novalidate>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Busca por CEP:</mat-label>
+    <input matInput placeholder="Input" formControlName="cep">
+  </mat-form-field>
+  <button [disabled]="!buscaCepForm.valid" (click)="onSubmit()">Buscar</button>
+</form>

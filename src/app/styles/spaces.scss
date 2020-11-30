@@ -1,0 +1,16 @@
+$space: (
+  xsmall: 5px,
+  small: 10px,
+  medium: 20px,
+  large:  30px,
+  xlarge: 50px
+);
+
+@function spaces($space-name) {
+  $space: map-get($space, $space-name);
+  @if $space {
+    @return $space;
+  } @else {
+    @warn "=> ERROR: COLOR NOT FOUND!";
+  }
+}

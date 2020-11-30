@@ -1,0 +1,26 @@
+@import '../../../styles/font.scss';
+@import '../../../styles/spaces.scss';
+@import '../../../styles/colors.scss';
+h1 {
+  padding-top: spaces(xlarge);
+  font-size: fonts(xlarge);
+  border-bottom: 1px solid colors(light);
+  margin-bottom: spaces(xlarge);
+}
+
+.busca-cep {
+  border: 1px solid colors(light);
+  border-radius: 5px;
+  padding: spaces(medium);
+  margin-bottom: spaces(xlarge);
+
+  & + div {
+    width: 100%;
+  }
+}
+.loading{
+  text-align: center;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+}

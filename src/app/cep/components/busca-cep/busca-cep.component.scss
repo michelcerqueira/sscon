@@ -1,0 +1,40 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/spaces.scss';
+
+$color: colors(primary);
+$space: spaces(xlarge);
+form {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: row;
+  padding: 0 calc(#{$space} * 2);
+
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .mat-form-field {
+    width: 100%;
+    height: 60px;
+    margin-right: 20px;
+
+    @media only screen and (max-width: 600px) {
+      margin-right: 0;
+    }
+  }
+
+  button {
+    border: 1px solid $color;
+;
+    background-color: transparent;
+    color: $color;
+    height: 55px;
+    border-radius: 10px;
+    position: relative;
+    top: 2px;
+    width: 100%;
+  }
+}
