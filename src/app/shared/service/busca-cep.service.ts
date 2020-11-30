@@ -11,12 +11,12 @@ export class BuscaCepService {
 
   constructor(private http: HttpClient, private subjectService: SubjectService) { }
 
-  public downloadFile(cep: string): any  {
+  public downloadFile(cep: string): void  {
     this.loadingStatus(true);
     const cepConsulta = cep.replace('-', '');
     const url = `${this.URL}${cepConsulta}/json/`;
     const consulta = this.http.get(url, { observe: 'response' });
-    consulta.subscribe(data => {
+    consulta.subscribe((data) => {
       this.subjectService.updateCep(data.body);
         this.loadingStatus(false);
     },
